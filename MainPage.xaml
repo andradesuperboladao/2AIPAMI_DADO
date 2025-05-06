@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="prova.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Image
+                x:Name="FaceImage"
+                Source="um.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="Faces da moeda: Cara e Coroa." />
+
+            <Picker x:Name="FacePicker"
+                Title="Escolha a Face do dado!">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>um</x:String>
+                        <x:String>dois</x:String>
+                        <x:String>tres</x:String>
+                        <x:String>quatro</x:String>
+                        <x:String>cinco</x:String>
+                        <x:String>seis</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <Button
+                x:Name="FlipButton"
+                Text="Jogar o dado" 
+                SemanticProperties.Hint="Gira o dado e cai uma das Faces."
+                Clicked="FlipButton_Clicked"
+                HorizontalOptions="Fill" />
+            <Label>
+                
+            </Label>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
